@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Body with full-screen background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  height: 100vh;
+  background-image: url('./assets/background.jpeg'); /* Update to the correct relative path */
+  background-size: cover; /* Ensure the image covers the viewport */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Main container styling */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  width: 100%;
+}
+
+.center-container {
+  height: auto;
+  max-width: 90%;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.input-box-todo {
+  margin-left: 10px;
+  width: 70%;
+  height: 40px;
+  border-radius: 14px;
+  border: 1px solid black;
+  padding-left: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  outline: none;
+  font-size: large;
+}
+
+.add-btn {
+  border-radius: 20px;
+  border: none;
+  background-color: #316fc1;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(11, 10, 10, 0.3);
+  transition: 0.3s;
+  padding: 8px;
+}
+
+.add-btn:active {
+  box-shadow: none;
+}
+
+/* List container */
+.list-item {
+  list-style-type: none;
+  background-color: #002b67;
+  border: 2px solid rgb(161, 158, 158);
+  font-size: 20px;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 7px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+/* Icons */
+.icons {
+  position: absolute;
+  right: 10px;
+}
+
+.icons i {
+  margin: 4px;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.icon-delete:hover {
+  color: red;
+}
+
+/* Footer Styling */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(1, 19, 35, 0.7);
+  color: rgb(120, 171, 243);
+  font-size: 14px;
+  text-align: center;
+}
+/* List item when marked as done */
+.list-item.done {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Edit input styling */
+.edit-input {
+  width: 70%;
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.save-btn {
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+
+/* Responsive Design */
+
+/* For small devices like mobile phones */
+@media (max-width: 600px) {
+  .center-container {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .input-box-todo {
+    width: 80%;
+    height: 35px;
+    font-size: medium;
+  }
+
+  .add-btn {
+    font-size: medium;
+    padding: 8px 12px;
+  }
+
+  .list-item {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .icons i {
+    font-size: medium;
+  }
+}
+
+/* For medium devices like tablets */
+@media (max-width: 1024px) {
+  .center-container {
+    width: 70%;
+  }
+
+  .input-box-todo {
+    width: 70%;
+  }
+
+  .list-item {
+    font-size: 18px;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 1025px) {
+  .center-container {
+    max-width: 400px;
+  }
+}
